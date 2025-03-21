@@ -10,10 +10,10 @@ import kotlinx.coroutines.launch
 class MainViewModel : ViewModel() {
     val btcRate = MutableLiveData<String>()
     val rateCheckInteractor = RateCheckInteractor()
+
     fun onCreate() {
         refreshRate()
     }
-
     fun onRefreshClicked() {
         refreshRate()
     }
@@ -25,9 +25,8 @@ class MainViewModel : ViewModel() {
             btcRate.value = rate
         }
     }
-
     companion object {
         const val TAG = "MainViewModel"
-        const val CRYPTO_COMPARE_URL = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD" // Новый URL
+        const val CRYPTO_COMPARE_URL = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD"
     }
 }

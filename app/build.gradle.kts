@@ -45,7 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
+    implementation ("androidx.core:core-ktx:1.10.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")

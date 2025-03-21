@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         initViewModel()
         initView()
     }
-
     fun initViewModel() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
@@ -45,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnSubscribeToRate).setOnClickListener {
             val targetRate = textTargetRate.text.toString()
             val startRate = viewModel.btcRate.value
-
             if (targetRate.isNotEmpty() && startRate?.isNotEmpty() == true) {
                 RateCheckService.stopService(this)
                 RateCheckService.startService(this, startRate, targetRate)
